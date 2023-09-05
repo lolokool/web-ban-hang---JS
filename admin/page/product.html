@@ -1,0 +1,117 @@
+<div class="data-management">
+    <div class="list-group search">
+      <div class="list-group-item khung">
+        <nav class="bg-body-tertiary search">
+          <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="list-group">
+      <div class="list-group-item khung">
+        <button type="button" class="btn btn-primary add" data-bs-toggle="modal" data-bs-target="#exampleModal">Add new</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm sản phẩm</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="form-product">
+                  <div class="mb-3">
+                    <label for="inputID" class="form-label">Id</label>
+                    <input type="text" class="form-control" placeholder="Id" id="inputID">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Name" id="Name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Price" class="form-label">Price</label>
+                    <input type="text" class="form-control" placeholder="Price" id="Price">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Info" class="form-label">Info</label>
+                    <input type="text" class="form-control" placeholder="Info" id="Info">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Detail" class="form-label">Detail</label>
+                    <input type="text" class="form-control" placeholder="Detail" id="Detail">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Star" class="form-label">Star</label>
+                    <input type="text" class="form-control" placeholder="Star" id="Star">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Image" class="form-label">Image</label>
+                    <input class="form-control" type="file" id="Image">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Manufacturers" class="form-label">Manufacturers</label>
+                    <select class="form-select" aria-label="Default select example" id="Manufacturers">
+                      <option selected>Open this select menu</option>
+                      <option value="1">Samsung</option>
+                      <option value="2">Apple</option>
+                      <option value="3">Oppo</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Catagory" class="form-label">Catagory</label>
+                    <select class="form-select" aria-label="Default select example" id="Catagory">
+                      <option selected>Open this select menu</option>
+                      <option value="1">Điện thoại</option>
+                      <option value="2">Laptop</option>
+                      <option value="3">Tablet</option>
+                    </select>
+                  </div>
+                  <div class="submit">
+                    <button type="submit" class="btn btn-primary" onclick="addPro()">Save</button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <table id="table-product" class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Info</th>
+              <th scope="col">Detail</th>
+              <th scope="col">Star</th>
+              <th scope="col">Image</th>
+              <th scope="col">NSX</th>
+              <th scope="col">Category</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="mybang"></tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
